@@ -1,0 +1,157 @@
+<!--
+IT Wala Shop Website (by Sandeep)
+Save as `index.html` and open in a browser. Host on Netlify/GitHub Pages.
+-->
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IT Wala — Your Trusted IT Gadgets & Repair Partner</title>
+  <meta name="description" content="IT Wala - IT gadgets, repair & support shop in Indore">
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--accent:#06b6d4;--muted:#94a3b8;--glass: rgba(255,255,255,0.03)}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial; background:linear-gradient(180deg,#071126 0%, #0b1220 100%);color:#e6eef6;line-height:1.5}
+    .container{max-width:1000px;margin:28px auto;padding:20px}
+
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:grid;place-items:center;font-weight:700}
+    nav a{color:var(--muted);text-decoration:none;margin-left:12px}
+
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;margin-top:28px}
+    .card{background:var(--card);padding:22px;border-radius:14px;box-shadow: 0 6px 20px rgba(2,6,23,0.6)}
+    h1{margin:0 0 10px 0;font-size:28px}
+    p.lead{color:var(--muted);margin:0 0 18px}
+
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#7c3aed);color:#052022;text-decoration:none;font-weight:600}
+
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
+    .feature{background:var(--glass);padding:12px;border-radius:10px;color:var(--muted)}
+
+    .contact-field{display:flex;flex-direction:column;margin-bottom:10px}
+    input,textarea{background:transparent;border:1px solid rgba(255,255,255,0.08);padding:10px;border-radius:8px;color:inherit}
+    textarea{min-height:120px}
+
+    footer{margin-top:28px;color:var(--muted);font-size:14px;text-align:center}
+
+    @media (max-width:880px){
+      .hero{grid-template-columns:1fr}
+      .features{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:520px){
+      .features{grid-template-columns:1fr}
+      .logo{width:44px;height:44px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">IT</div>
+        <div>
+          <div style="font-weight:700">IT Wala</div>
+          <div style="font-size:13px;color:var(--muted)">Your Trusted IT Gadgets & Repair Partner</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main class="hero">
+      <section>
+        <div class="card">
+          <h1>Welcome to IT Wala 👋</h1>
+          <p class="lead">We provide IT gadgets, laptop/PC repair, networking setup, printer support, and more. Visit our shop or contact us for quick IT solutions in Indore.</p>
+          <a class="btn" href="#contact">Get in touch</a>
+
+          <div class="features" style="margin-top:18px">
+            <div class="feature"><strong>Laptop/PC Repair</strong><div style="font-size:13px;margin-top:6px">Fast & reliable service</div></div>
+            <div class="feature"><strong>Networking Setup</strong><div style="font-size:13px;margin-top:6px">Wired & wireless solutions</div></div>
+            <div class="feature"><strong>Printer Support</strong><div style="font-size:13px;margin-top:6px">Installation & troubleshooting</div></div>
+          </div>
+        </div>
+
+        <div id="about" class="card" style="margin-top:16px">
+          <h3>About IT Wala</h3>
+          <p style="color:var(--muted)">Located in Tejaji Nagar, Indore, IT Wala is your one-stop shop for IT gadgets, troubleshooting, and repair services. We focus on practical solutions and quick support for individuals and businesses.</p>
+        </div>
+
+        <div id="services" class="card" style="margin-top:16px">
+          <h3>Services</h3>
+          <ul style="color:var(--muted)">
+            <li>Laptop & Desktop Repair</li>
+            <li>Printer Installation & Support</li>
+            <li>Networking Setup (LAN/Wi-Fi)</li>
+            <li>IT Gadgets & Accessories</li>
+          </ul>
+        </div>
+      </section>
+
+      <aside>
+        <div class="card">
+          <h3>Contact form</h3>
+          <form id="contactForm">
+            <div class="contact-field">
+              <label for="name">Name</label>
+              <input id="name" name="name" placeholder="Your name" required>
+            </div>
+            <div class="contact-field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@example.com" required>
+            </div>
+            <div class="contact-field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="How can we help?" required></textarea>
+            </div>
+            <button type="submit" class="btn">Send</button>
+            <div id="formMsg" style="margin-top:10px;color:var(--muted);font-size:13px"></div>
+          </form>
+        </div>
+
+        <div class="card" style="margin-top:16px">
+          <h4>Shop Details</h4>
+          <p style="color:var(--muted);font-size:14px;margin:6px 0"><strong>Address:</strong> 244, near Hanuman temple, Tejaji Nagar, Indore, Madhya Pradesh 452020</p>
+          <p style="color:var(--muted);font-size:14px;margin:6px 0"><strong>Phone:</strong> <a href="tel:08989825995" style="color:var(--accent);text-decoration:none">089898 25995</a></p>
+          <iframe src="https://www.google.com/maps?q=244,+near+hanuman+temple,+Tejaji+Nagar,+Indore,+Madhya+Pradesh+452020&output=embed" width="100%" height="200" style="border:0;border-radius:10px;margin-top:10px"></iframe>
+        </div>
+      </aside>
+    </main>
+
+    <footer id="contact">
+      <div class="card" style="display:inline-block;padding:16px;border-radius:12px">
+        <strong>Email:</strong> <a href="mailto:itwala@example.com" style="color:var(--accent);text-decoration:none">itwala@example.com</a>
+        <div style="margin-top:8px;color:var(--muted)">Phone / WhatsApp: +91 89898 25995</div>
+      </div>
+
+      <div style="margin-top:12px;color:var(--muted)">© <span id="year"></span> IT Wala — All rights reserved</div>
+    </footer>
+  </div>
+
+  <script>
+    // Update copyright year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Handle form submit
+    const form = document.getElementById('contactForm');
+    const formMsg = document.getElementById('formMsg');
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      if(!name || !email || !message){ formMsg.textContent = 'Please fill all fields'; return }
+      const subject = encodeURIComponent('Website Inquiry from ' + name);
+      const body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\nMessage:\n' + message);
+      window.location.href = `mailto:itwala@example.com?subject=${subject}&body=${body}`;
+      formMsg.textContent = 'Mail client should open — otherwise edit the mailto address in the HTML.';
+    });
+  </script>
+</body>
+</html>
